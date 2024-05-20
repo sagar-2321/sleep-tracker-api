@@ -1,0 +1,124 @@
+#### Sleep Tracker API
+
+This is a simple RESTful API for a Sleep Tracker App. It allows users to submit their sleep data and retrieve sleep records.
+
+# Setup
+1.	Clone the repository:
+bash
+Copy code
+git clone <repository-url> cd sleep-tracker-api 
+
+2.	Install dependencies:
+bash
+Copy code
+npm install 
+
+3.	Start the server:
+bash
+Copy code
+node app.js 
+The server will start running on http://localhost:3000.
+
+
+
+#### Using the API
+
+### 1. Running in Postman
+Posting Data in Raw JSON Format:
+
+Open Postman and select the POST method.
+Set the request URL to http://localhost:3000/sleep.
+Select the "Body" tab, choose "raw", and set the data format to JSON.
+Provide the such JSON data in the request body:
+{
+    "userId": "user1",
+    "hours": 7,
+    "timestamp": "2023-05-19 22:00"
+}
+•	Click "Send" to submit the request.
+
+### Variables Format:
+•	userId: A string representing the user ID.
+•	hours: A non-number representing the hours of sleep .
+•	timestamp: A string representing the timestamp of sleep in the format YYYY-MM-DD HH:mm:ss.
+
+### 2. CRUD Operations
+Create a New Sleep Record
+URL: /sleep
+Method: POST
+Request Body:
+json
+Copy code
+{
+    "userId": "user1",
+    "hours": 7,
+    "timestamp": "2023-05-19 22:00"
+}
+Response:
+json
+Copy code
+{
+    "id": "1",
+    "userId": "user1",
+    "hours": 7,
+    "timestamp": "2023-05-19 22:00"
+}
+
+
+### Get Sleep Records for a User
+URL: /sleep/:userId
+Method: GET
+Response:
+json
+Copy code
+[
+    {
+        "id": "1",
+        "userId": "user1",
+        "hours": 7,
+        "timestamp": "2023-05-19 22:00"
+    }
+]
+
+
+### Update a Sleep Record
+URL: /sleep/:recordId
+Method: PUT
+Request Body:
+json
+Copy code
+{
+    "userId": "user1",
+    "hours": 8,
+    "timestamp": "2023-05-19 23:00"
+}
+Response:
+json
+Copy code
+{
+    "id": "1",
+    "userId": "user1",
+    "hours": 8,
+    "timestamp": "2023-05-19 23:00"
+}
+
+
+### Delete a Sleep Record
+URL: /sleep/:recordId
+Method: DELETE
+Response:
+json
+Copy code
+{
+    "id": "1",
+    "userId": "user1",
+    "hours": 7,
+    "timestamp": "2023-05-19 22:00"
+}
+
+### Testing
+To run the tests, use the following command:
+
+bash
+Copy code
+npx mocha test/api.test.js
