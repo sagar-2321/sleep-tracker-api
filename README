@@ -6,7 +6,7 @@ This is a simple RESTful API for a Sleep Tracker App. It allows users to submit 
 1.	Clone the repository:
 bash
 Copy code
-git clone <repository-url> cd sleep-tracker-api 
+git clone https://github.com/sagar-2321/sleep-tracker-api.git cd sleep-tracker-api 
 
 2.	Install dependencies:
 bash
