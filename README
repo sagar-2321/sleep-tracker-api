@@ -33,7 +33,7 @@ Provide the such JSON data in the request body:
 {
     "userId": "user1",
     "hours": 7,
-    "timestamp": "2023-05-19 22:00"
+    "timestamp": "2023-05-19 22:00:10"
 }
 •	Click "Send" to submit the request.
 
@@ -52,7 +52,7 @@ Copy code
 {
     "userId": "user1",
     "hours": 7,
-    "timestamp": "2023-05-19 22:00"
+    "timestamp": "2023-05-19 22:00:10"
 }
 Response:
 json
@@ -61,7 +61,7 @@ Copy code
     "id": "1",
     "userId": "user1",
     "hours": 7,
-    "timestamp": "2023-05-19 22:00"
+    "timestamp": "2023-05-19 22:00:10"
 }
 
 
@@ -76,7 +76,7 @@ Copy code
         "id": "1",
         "userId": "user1",
         "hours": 7,
-        "timestamp": "2023-05-19 22:00"
+        "timestamp": "2023-05-19 22:00:10"
     }
 ]
 
@@ -90,7 +90,7 @@ Copy code
 {
     "userId": "user1",
     "hours": 8,
-    "timestamp": "2023-05-19 23:00"
+    "timestamp": "2023-05-19 23:00:19"
 }
 Response:
 json
@@ -99,7 +99,7 @@ Copy code
     "id": "1",
     "userId": "user1",
     "hours": 8,
-    "timestamp": "2023-05-19 23:00"
+    "timestamp": "2023-05-19 23:00:19"
 }
 
 
@@ -113,7 +113,7 @@ Copy code
     "id": "1",
     "userId": "user1",
     "hours": 7,
-    "timestamp": "2023-05-19 22:00"
+    "timestamp": "2023-05-19 22:00:19"
 }
 
 ### Testing
